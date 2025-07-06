@@ -14,8 +14,16 @@
 
 fn main() {
     // You can optionally experiment here.
+    calculate_price_of_apples(35);
 }
-
+fn calculate_price_of_apples (quantity: i32) -> i32 {
+    // If the quantity is more than 40, return the price at 1 rustbuck per apple.
+    if quantity > 40 {
+        return quantity;
+    }
+    // Otherwise, return the price at 2 rustbucks per apple.
+    quantity * 2
+}
 // Don't change the tests!
 #[cfg(test)]
 mod tests {
