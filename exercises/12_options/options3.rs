@@ -6,10 +6,10 @@ struct Point {
 
 fn main() {
     let optional_point = Some(Point { x: 100, y: 200 });
-
+    //ref creates reference to the value inside Some, so p is a &Point(Reference)
     // TODO: Fix the compiler error by adding something to this match statement.
     match optional_point {
-        Some(p) => println!("Co-ordinates are {},{}", p.x, p.y),
+        Some(ref p) => println!("Co-ordinates are {},{}", p.x, p.y),
         _ => panic!("No match!"),
     }
 
